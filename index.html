@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MyWidearea</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"  rel="stylesheet" media="screen">
+		<link href="dist/mywidearea.css" rel="stylesheet" media="screen">
+		<link href="css/style.css" rel="stylesheet" media="screen">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" media="screen">
+	</head>
+	<body>
+		<div class="container" id="page">
+			<div class="jumbotron">
+				<h1>MyWidearea</h1>
+				<p>Create expandable textarea and write large amount of text easily</p>
+				<a href="http://pokusew.github.io/mywidearea" class="btn btn-default btn-lg"><i class="fa fa-github"></i> View on Github</a>
+			</div>
+
+			<h2>Demo</h2>
+			<textarea class="form-control" rows="3" data-mywidearea="true">Click on the icon in right corner to activate MyWidearea</textarea>
+
+			<h2>Installation</h2>
+			<p>
+				You can install mywidearea using bower.<br>
+				<code>bower install mywidearea</code>
+			</p>
+			<p>
+				Then insert CSS styles
+			</p>
+			<pre>//Font Awesome http://fontawesome.io/
+&lt;link href=&quot;//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;mywidearea.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;</pre>
+			<p>
+				and the script at the end of the body
+			</p>
+			<pre>&lt;script src=&quot;mywidearea.js&quot;&gt;&lt;/script&gt;</pre>
+
+			<h2>Usage</h2>
+			<p>Add <code>data-mywidearea="true"</code> to textareas which you want activate.</p>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Default value</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="code">scheme</td>
+						<td>
+							string
+						</td>
+						<td>light</td>
+						<td>Changes default colour scheme. Possible values are <code>light</code> and <code>dark</code></td>
+					</tr>
+					<tr>
+						<td class="code">iconActivate</td>
+						<td>
+							string
+						</td>
+						<td><code>&lt;i class=&quot;fa fa-arrows-alt&quot;&gt;&lt;/i&gt;</code></td>
+						<td>Activate icon</td>
+					</tr>
+					<tr>
+						<td class="code">iconClose</td>
+						<td>
+							string
+						</td>
+						<td><code>&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;</code></td>
+						<td>Close icon</td>
+					</tr>
+					<tr>
+						<td class="code">iconContrast</td>
+						<td>
+							string
+						</td>
+						<td><code>&lt;i class=&quot;fa fa-adjust&quot;&gt;&lt;/i&gt;</code></td>
+						<td>Contrast icon</td>
+					</tr>
+				</tbody>
+			</table>
+			<script src="https://gist.github.com/pokusew/0e26f2e92237f353c059.js"></script>
+			<div class="bs-callout bs-callout-danger">
+				<h4>Settings for Glypicons</h4>
+				<p>In default MyWidearea uses <a href="http://fontawesome.io/">Font Awesome</a>. To use Glypicons add these settings.</p>
+				<script src="https://gist.github.com/pokusew/2d6099fe0e954a47cdab.js"></script>
+			</div>
+
+			<hr>
+			<footer>
+				<p>
+					&COPY; 2014 Martin Endler | <a href="http://pokusew.github.io/mywidearea" class=""><i class="fa fa-github"></i> View on Github</a>
+				</p>
+			</footer>
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script src="dist/mywidearea.js"></script>
+		<script>
+			var settings = {
+				scheme: 'light'
+			};
+			/*var settings = {
+				iconActivate: '<span class="glyphicon glyphicon-fullscreen"></span>',
+				iconClose: '<span class="glyphicon glyphicon-remove"></span',
+				iconContrast: '<span class="glyphicon glyphicon-adjust"></span',
+			};*/
+
+			var area = new MyWidearea(settings);
+
+			area.enable();
+		</script>
+	</body>
+</html>
