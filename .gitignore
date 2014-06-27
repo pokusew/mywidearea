@@ -1,0 +1,14 @@
+# Node, npm, Grunt, Bower
+node_modules/
+bower_components/
+.tmp/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+
+# NetBeans
+/nbproject/private/
